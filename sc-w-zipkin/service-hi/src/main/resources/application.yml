@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: service-hi
+
+#下载在zipkin jar包 通过java -jar zipkin-server-2.10.4-exec.jar命令启动
+  zipkin:
+    base-url: http://localhost:9411/
+server:
+  port: 8988
+
