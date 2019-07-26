@@ -1,4 +1,4 @@
-package com.forezp.servicehi;
+package com.stiffening.servicehello;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,10 +12,10 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
 @EnableHystrix
 @EnableHystrixDashboard
 @EnableCircuitBreaker
-public class ServiceHiApplication {
+public class ServiceHelloApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ServiceHiApplication.class, args);
+        SpringApplication.run(ServiceHelloApplication.class, args);
     }
 
 }

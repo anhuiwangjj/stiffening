@@ -8,14 +8,10 @@ spring:
   application:
     name: service-zuul
 
-# ribbon 时间设置
 ribbon:
-  # 连接超时时间（ms）
   ConnectTimeOut: 10000
-  # 通信超时时间（ms）
   ReadTimeOut: 10000
 
-# 熔断超时时间（ms）
 hystrix:
   command:
     default:
