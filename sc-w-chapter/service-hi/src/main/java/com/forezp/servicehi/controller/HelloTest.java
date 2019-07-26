@@ -1,5 +1,6 @@
 package com.forezp.servicehi.controller;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -27,7 +28,12 @@ public class HelloTest {
     @ApiImplicitParams({
             @ApiImplicitParam(name ="words",required = true,dataType = "string",paramType = "query")
     })
-    public String sayHello(@RequestParam(name ="words") String words){
+    @HystrixCommand(fallbackMethod = "helloError")
+    public String sayHello(@RequestParam(name ="words", defaultValue = "helloWorld") String words){
         return "Say "+ words + " ,I'm from port"+ port;
+    }
+
+    public String helloError(String words) {
+        return "Say,"+words+",sorry,error!";
     }
 }
