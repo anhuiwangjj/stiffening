@@ -17,7 +17,7 @@ public class HiController {
     private ServiceHiFeign serviceHiFeign;
 
     @GetMapping("/sayHello")
-    public String sayHello (@RequestParam String words) {
+    public String sayHello(@RequestParam String words) {
         return serviceHiFeign.sayHello(words);
     }
 }

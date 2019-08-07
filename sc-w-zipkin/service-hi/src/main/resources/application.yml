@@ -2,7 +2,7 @@ spring:
   application:
     name: service-hi
 
-#ÏÂÔØÔÚzipkin jar°ü Í¨¹ıjava -jar zipkin-server-2.10.4-exec.jarÃüÁîÆô¶¯
+  #ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½zipkin jarï¿½ï¿½ Í¨ï¿½ï¿½java -jar zipkin-server-2.10.4-exec.jarï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
   zipkin:
     base-url: http://localhost:9411/
 server:

@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author wjj
  * @date 2019/7/22
  */
-@Api(value = "spring-cloud测试接口",tags = {"测试接口"})
+@Api(value = "spring-cloud测试接口", tags = {"测试接口"})
 @RestController
 @RequestMapping("/helloTest")
 public class HelloTest {
@@ -26,14 +26,14 @@ public class HelloTest {
     @ApiOperation(value = "说话接口", notes = "说话接口")
     @GetMapping("/sayHello")
     @ApiImplicitParams({
-            @ApiImplicitParam(name ="words",required = true,dataType = "string",paramType = "query")
+            @ApiImplicitParam(name = "words", required = true, dataType = "string", paramType = "query")
     })
     @HystrixCommand(fallbackMethod = "helloError")
-    public String sayHello(@RequestParam(name ="words", defaultValue = "helloWorld") String words){
-        return "Say "+ words + " ,I'm from port"+ port;
+    public String sayHello(@RequestParam(name = "words", defaultValue = "helloWorld") String words) {
+        return "Say " + words + " ,I'm from port" + port;
     }
 
     public String helloError(String words) {
-        return "Say,"+words+",sorry,error!";
+        return "Say," + words + ",sorry,error!";
     }
 }

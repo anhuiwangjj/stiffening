@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: query-route
+        uri: http://httpbin.org:80/get
+        predicates:
+#        - Query=test, ba.
+        - Query=test
+  profiles: query-route

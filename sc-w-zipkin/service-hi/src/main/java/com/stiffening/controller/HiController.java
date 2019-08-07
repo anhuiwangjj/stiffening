@@ -22,9 +22,9 @@ public class HiController {
     private RestTemplate restTemplate;
 
     @GetMapping("/miss")
-    public String call(){
+    public String call() {
         log.info("calling trace service-hi");
-        return restTemplate.getForObject("http://localhost:8989/miss/hi",String.class);
+        return restTemplate.getForObject("http://localhost:8989/miss/hi", String.class);
     }
 
     @GetMapping("/info")

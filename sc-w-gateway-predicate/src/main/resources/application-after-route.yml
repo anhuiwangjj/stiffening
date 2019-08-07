@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: after-route
+        uri: http://httpbin.org:80/get
+        predicates:
+        - After=2020-01-20T17:42:47.789-07:00[America/Denver]
+        #- After=2017-07-25T13:42:47.789-07:00[Asia/Shanghai]
+
+  profiles: after-route

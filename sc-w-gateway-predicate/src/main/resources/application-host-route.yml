@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: host-route
+        uri: http://httpbin.org:80/get
+        predicates:
+        - Host=**.stiffening.com
+  profiles: host-route

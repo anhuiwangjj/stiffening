@@ -11,11 +11,12 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @date 2019/7/23
  */
 @Service
-@FeignClient(name = "service-hi",fallback = ServiceHiFallBack.class)
+@FeignClient(name = "service-hi", fallback = ServiceHiFallBack.class)
 public interface ServiceHiFeign {
 
     /**
      * service-hi say方法实现
+     *
      * @param words
      * @return
      */

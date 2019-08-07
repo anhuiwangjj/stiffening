@@ -7,10 +7,10 @@ import org.springframework.stereotype.Component;
  * @date 2019/7/23
  */
 @Component
-public class ServiceHiFallBack implements ServiceHiFeign{
+public class ServiceHiFallBack implements ServiceHiFeign {
 
     @Override
     public String sayHello(String words) {
-        return "Sorry,"+ words + " error";
+        return "Sorry," + words + " error";
     }
 }

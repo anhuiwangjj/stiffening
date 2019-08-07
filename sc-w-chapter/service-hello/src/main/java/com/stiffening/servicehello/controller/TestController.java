@@ -19,11 +19,11 @@ public class TestController {
 
     @GetMapping("/sayHello")
     @HystrixCommand(fallbackMethod = "helloError")
-    public String sayHello(@RequestParam(name ="words", defaultValue = "helloWorld") String words){
-        return "Say "+ words + " ,I'm from port"+ port;
+    public String sayHello(@RequestParam(name = "words", defaultValue = "helloWorld") String words) {
+        return "Say " + words + " ,I'm from port" + port;
     }
 
     public String helloError(String words) {
-        return "Say,"+words+",sorry,error!";
+        return "Say," + words + ",sorry,error!";
     }
 }

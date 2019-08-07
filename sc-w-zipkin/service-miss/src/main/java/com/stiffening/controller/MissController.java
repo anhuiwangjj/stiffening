@@ -22,7 +22,7 @@ public class MissController {
     private RestTemplate restTemplate;
 
     @GetMapping("/hi")
-    public String home(){
+    public String home() {
         log.info("hi is being called");
         return "Hi, I'm miss!";
     }
@@ -30,6 +30,6 @@ public class MissController {
     @GetMapping("/missInfo")
     public String info() {
         log.info("info is being called");
-        return restTemplate.getForObject("http://localhost:8988/hi/info",String.class);
+        return restTemplate.getForObject("http://localhost:8988/hi/info", String.class);
     }
 }

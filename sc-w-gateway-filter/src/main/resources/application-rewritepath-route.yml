@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: rewritepath-route
+        uri: https://github.com
+        filters:
+        - RewritePath=/foo/(?<segment>.*), /$\{segment}
+        predicates:
+        - Path=/foo/**
+  profiles: rewritepath-route
