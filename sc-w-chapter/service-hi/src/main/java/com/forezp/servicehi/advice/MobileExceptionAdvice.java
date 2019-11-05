@@ -8,6 +8,12 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+/**
+ * 手持端全局异常处理
+ * @author wjj
+ * @date 2019/11/04
+ */
+
 @ControllerAdvice("com.forezp.servicehi.controller.mobile")
 @Order(1)
 @ResponseBody

@@ -91,15 +91,14 @@ public class SwaggerUIConfig {
      */
     @Bean
     public ApiInfo apiInfo() {
-        return new ApiInfoBuilder()//页面标题
+        return new ApiInfoBuilder()
                 .title(applicationName + "管理 RESTful API")
                 //创建人
-                .contact(new Contact("任恒利", "", ""))
+                .contact(new Contact("admin", "", ""))
                 //版本号
                 .version("1.0")
                 //描述
                 .description(applicationName + "API接口文档")
                 .build();
     }
-
 }

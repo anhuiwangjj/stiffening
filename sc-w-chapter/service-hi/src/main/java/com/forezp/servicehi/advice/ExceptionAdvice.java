@@ -8,6 +8,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import static com.forezp.servicehi.util.ReturnResultUtil.handleException;
 
+/**
+ * 全局异常处理
+ * @author wjj
+ * @date 2019/11/04
+ */
 @ControllerAdvice
 @ResponseBody
 public class ExceptionAdvice {

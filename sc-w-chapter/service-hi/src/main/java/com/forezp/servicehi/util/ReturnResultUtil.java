@@ -7,6 +7,11 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Objects;
 
+/**
+ * 通用返回对象工具类
+ * @author wjj
+ * @date 2019/11/04
+ */
 public class ReturnResultUtil {
 
     private static final Logger logger = LoggerFactory.getLogger(ReturnResultUtil.class);
